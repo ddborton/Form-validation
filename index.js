@@ -17,13 +17,13 @@ function checkInputs() {
     const password2Value = password2.value.trim();
 
     if(usernameValue === '') {
-        setErrorFor(username, 'Username cannot be blank');
+        setErrorFor(username, 'Cannot be blank');
     } else {
         setSuccessFor(username);
     }
 
     if(emailValue === '') {
-        setErrorFor(email, 'Email cannot be blank');
+        setErrorFor(email, 'Cannot be blank');
     } else if (!isEmail(emailValue)) {
         setErrorFor(email, 'Not a valid email');
     } else {
@@ -31,13 +31,13 @@ function checkInputs() {
     }
 
     if(passwordValue === '') {
-        setErrorFor(password, 'Password cannot be blank');
+        setErrorFor(password, 'Cannot be blank');
     } else {
         setSuccessFor(password);
     }
 
     if(password2Value === '') {
-        setErrorFor(password2, 'Password2 cannot be blank');
+        setErrorFor(password2, 'Cannot be blank');
     } else if(passwordValue !== password2Value) {
         setErrorFor(password2, 'Passwords does not match');
     } else{
